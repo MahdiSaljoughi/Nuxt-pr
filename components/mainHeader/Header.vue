@@ -324,6 +324,7 @@
               </nuxt-link>
             </div>
           </div>
+          <!-- searchBox -->
           <div class="flex items-center">
             <div class="relative rounded-md shadow-sm">
               <div
@@ -346,7 +347,7 @@
             </div>
             <input
               type="text"
-              placeholder="جستوجو در مبیت"
+              placeholder="جستجو در مبیت"
               class="outline-none hidden lg:block placeholder:text-white xl:placeholder:text-xs lg:placeholder:text-[9px] bg-[#fff0] bg-gradient-to-l from-white/15 3xl:w-[700px] 2xl:w-[370px] xl:w-[310px] lg:w-[200px] w-[90%] 2xl:h-[42px] xl:h-[33px] lg:h-[24px] focus:ring-2 ring-white xl:rounded-[12px] lg:rounded-[6px] pl-10 xl:pr-16 2xl:pr-[75px] lg:pr-10 shadow-sm"
             />
           </div>
@@ -590,15 +591,80 @@
     </header>
     <!-- Header Mobile -->
     <header
-      class="lg:hidden inline-block fixed bg-[#1C39BB] w-full sm:px-5 px-3"
+      class="lg:hidden inline-block fixed bg-[#1C39BB] w-full sm:px-5 z-30 h-[127px] text-zinc-600"
     >
-      <div class="flex items-center justify-between mt-4">
+      <!-- menuMobile -->
+      <div id="menu" class="hidden fixed right-0 w-[310px] h-screen bg-white shadow-xl z-[100]">
+        <div
+          class="bg-[#1C39BB] w-full h-[60px] flex items-center pr-1.5 pl-[15px]"
+        >
+          <div @click="closeMenu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="m510.67-481.67-165-165q-12.34-12.33-12-29.33.33-17 12.66-29.33 11.67-12.34 29.34-12.34 17.66 0 30 12.34l194.66 194.66q6 6 9.17 13.34 3.17 7.33 3.17 15.66 0 9-3.17 16.34-3.17 7.33-9.17 13.33L405-256.67q-12.33 12.34-29.67 12-17.33-.33-29-12.66Q334-269.67 334-287q0-17.33 12.33-29.67l164.34-165Z"
+              />
+            </svg>
+          </div>
+          <div class="mx-auto">
+            <nuxt-link to="/">
+              <img src="/public/MOBIT.png" width="110" alt="" />
+            </nuxt-link>
+          </div>
+        </div>
+        <!-- LINKS -->
         <div>
+          <div class="flex items-center gap-x-5 mt-5 mr-5">
+            <span>svg</span>
+            <nuxt-link to="/">پیشنهادهای شگفت انگیز</nuxt-link>
+          </div>
+          <div class="flex items-center gap-x-5 mt-5 mr-5">
+            <span>svg</span>
+            <nuxt-link to="/">اخبار و مقلات روز</nuxt-link>
+          </div>
+          <div class="flex items-center gap-x-5 mt-5 mr-5">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-linejoin="round" stroke-width="1" d="M20.6 5.26a2.51 2.51 0 0 0-2.48-2.2H5.885a2.51 2.51 0 0 0-2.48 2.19l-.3 2.47a3.4 3.4 0 0 0 1.16 2.56v8.16a2.5 2.5 0 0 0 2.5 2.5h10.47a2.5 2.5 0 0 0 2.5-2.5v-8.16A3.4 3.4 0 0 0 20.9 7.72Zm-6.59 14.68h-4v-4.08a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5Zm4.73-1.5a1.5 1.5 0 0 1-1.5 1.5h-2.23v-4.08a2.5 2.5 0 0 0-2.5-2.5h-1a2.5 2.5 0 0 0-2.5 2.5v4.08H6.765a1.5 1.5 0 0 1-1.5-1.5v-7.57a3.2 3.2 0 0 0 1.24.24a3.36 3.36 0 0 0 2.58-1.19a.24.24 0 0 1 .34 0a3.36 3.36 0 0 0 2.58 1.19A3.4 3.4 0 0 0 14.6 9.92a.22.22 0 0 1 .16-.07a.24.24 0 0 1 .17.07a3.36 3.36 0 0 0 2.58 1.19a3.2 3.2 0 0 0 1.23-.24Zm-1.23-8.33a2.39 2.39 0 0 1-1.82-.83a1.2 1.2 0 0 0-.92-.43h-.01a1.2 1.2 0 0 0-.92.42a2.476 2.476 0 0 1-3.65 0a1.24 1.24 0 0 0-1.86 0A2.405 2.405 0 0 1 4.1 7.78l.3-2.4a1.52 1.52 0 0 1 1.49-1.32h12.23a1.5 1.5 0 0 1 1.49 1.32l.29 2.36a2.39 2.39 0 0 1-2.395 2.37Z"/></svg>
+            </span>
+            <nuxt-link to="/">همکار و قیمت عمده</nuxt-link>
+          </div>
+          <div class="flex items-center justify-between gap-x-5 mt-5 mr-5 ml-2.5">
+            <div class="flex items-center gap-x-5">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="currentColor" stroke="currentColor" stroke-linejoin="round" stroke-width="3" d="M18 6H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2ZM40 6H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2Z"/></svg>
+              </span>
+              <nuxt-link to="/">دسته بندی ها</nuxt-link>
+            </div>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="18px"
+                viewBox="0 -960 960 960"
+                width="18px"
+                fill="currentColor"
+              >
+                <path
+                  d="M480-647 284-452q-11 11-27.5 11.5T228-452q-11-11-11-28t11-28l224-224q12-12 28-12t28 12l224 224q11 11 11.5 27.5T732-452q-11 11-28 11t-28-11L480-647Z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div @click="closeMenu" id="overlay" class="hidden sm:fixed w-full h-screen bg-black/10"></div>
+      <!-- svg & logo -->
+      <div class="flex items-center justify-between mt-4">
+        <div @click="openMenu" class="w-9 flex justify-end">
           <svg
             class="text-white"
             xmlns="http://www.w3.org/2000/svg"
-            width="26px"
-            height="26px"
+            width="28px"
+            height="28px"
             viewBox="0 0 32 32"
             fill="currentColor"
           >
@@ -608,7 +674,7 @@
           </svg>
         </div>
         <!-- Logo -->
-        <NuxtLink to="/">
+        <NuxtLink to="/" class="w-40 mr-14">
           <div>
             <img
               src="~/assets/images/LogoType.png"
@@ -621,7 +687,7 @@
       </div>
       <!-- Search Box -->
       <div>
-        <div class="relative rounded-md shadow-sm">
+        <div class="relative rounded-md mx-3">
           <div
             class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4"
           >
@@ -640,15 +706,15 @@
           </div>
           <input
             type="text"
-            placeholder="جستوجو در مبیت"
-            class="outline-none mx-auto text-white sm:my-5 my-3 lg:hidden block w-full sm:h-[50px] h-[45px] placeholder:text-[#d4d4d4] sm:placeholder:text-xs placeholder:text-[10px] bg-[#fff0] bg-gradient-to-l from-white/15 focus:ring-2 ring-blue-700 sm:rounded-[18px] rounded-[16px] pl-10 sm:pr-14 pr-12 shadow-sm"
+            placeholder="جستجو در مبیت"
+            class="outline-none mx-auto text-white sm:my-5 mt-4 lg:hidden block w-full h-[50px] placeholder:text-zinc-400 placeholder:tracking-tight bg-[#ffffff00] bg-gradient-to-l from-[#ffffff17] focus:ring-2 ring-blue-700 sm:rounded-[18px] rounded-[16px] pl-10 sm:pr-14 pr-12"
           />
         </div>
       </div>
     </header>
     <!-- h2 -->
     <header
-      class="lg:hidden inline-block invisible bg-[#1C39BB] w-full sm:px-5 px-3"
+      class="lg:hidden inline-block invisible bg-[#1C39BB] w-full sm:px-5 px-3 h-[127px]"
     >
       <div class="flex items-center justify-between mt-4">
         <div>
@@ -706,7 +772,7 @@
     </header>
     <!-- Header buttom -->
     <div
-      class="lg:hidden flex justify-between items-center bg-gray-50 text-zinc-400/80 absolute bottom-0 w-full px-10 py-2 sm:px-20 sm:py-3 shadow-2xl text-[10px] sm:text-xs"
+      class="lg:hidden flex justify-between items-center bg-white text-zinc-400/80 absolute bottom-0 w-full px-10 py-3 sm:px-20 shadow-black shadow-md text-[10px] sm:text-xs"
     >
       <div>
         <NuxtLink
@@ -788,7 +854,6 @@
       </div>
     </div>
   </div>
-  <div class="border-r-[5px] border-blue-500 rounded-r-[4px]"></div>
 </template>
 
 <style scoped>
@@ -965,6 +1030,20 @@ export default {
         ],
       },
     };
+  },
+  methods: {
+    openMenu() {
+      const menu = document.getElementById("menu");
+      const overlay = document.getElementById("overlay");
+      menu.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+    },
+    closeMenu() {
+      const menu = document.getElementById("menu");
+      const overlay = document.getElementById("overlay");
+      menu.classList.add("hidden");
+      overlay.classList.add("hidden");
+    },
   },
 };
 </script>
