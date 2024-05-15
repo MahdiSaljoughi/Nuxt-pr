@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/woff/IRANSansXFaNum-Bold.woff") format("woff"),
+      url("./fonts/woff2/IRANSansXFaNum-Bold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/woff/IRANSansXFaNum-Regular.woff") format("woff"),
+      url("./fonts/woff2/IRANSansXFaNum-Regular.woff2") format("woff2");
+  }
+
+* {
+  font-family: IRANSansXFaNum, "Open Sans", sans-serif !important;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: IRANSansXFaNum, "Open Sans", sans-serif !important;
+  box-sizing: border-box !important;
+  direction: rtl;
+  margin: 0;
+  background-color: rgb(237, 241, 245);
+}
+
+header {
+    font-weight: 700;
+    font-size: 12.8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+span,
+textarea {
+  font-family: IRANSansXFaNum, "Open Sans", sans-serif !important;
+}
