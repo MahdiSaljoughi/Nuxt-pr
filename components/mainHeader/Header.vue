@@ -772,7 +772,7 @@
     </header>
     <!-- Header buttom -->
     <div
-      class="lg:hidden flex justify-between items-center bg-white text-zinc-400/80 absolute bottom-0 w-full px-10 py-3 sm:px-20 shadow-black shadow-md text-[10px] sm:text-xs"
+      class="lg:hidden flex justify-between items-center bg-white text-zinc-400/80 fixed bottom-0 w-full px-10 py-3 sm:px-20 shadow-black shadow-md text-[10px] sm:text-xs"
     >
       <div>
         <NuxtLink
