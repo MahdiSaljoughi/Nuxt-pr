@@ -15,23 +15,23 @@
       id="slider"
     >
       <swiper-slide>
-        <!-- <img class="hidden md:block" src="/p1.jpg" alt="p1" srcset="" /> -->
+        <img class="hidden md:block" src="/p1.jpg" alt="p1" srcset="" />
         <img class="block md:hidden" src="/public/posterMobileTcl.jpg" alt="" srcset="" />
       </swiper-slide>
       <swiper-slide>
-        <!-- <img class="hidden md:block" src="/p2.jpg" alt="p2" srcset="" /> -->
+        <img class="hidden md:block" src="/p2.jpg" alt="p2" srcset="" />
         <img class="block md:hidden" src="/public/posterMobileHonor.webp" alt="" srcset="" />
       </swiper-slide>
       <swiper-slide>
-        <!-- <img class="hidden md:block" src="/p3.jpg" alt="p3" srcset="" /> -->
+        <img class="hidden md:block" src="/p3.jpg" alt="p3" srcset="" />
         <img class="block md:hidden" src="/posterMobileKart.webp" alt="" srcset="" />
       </swiper-slide>
       <swiper-slide>
-        <!-- <img class="hidden md:block" src="/pgif.gif" alt="pgif" srcset="" /> -->
+        <img class="hidden md:block" src="/pgif.gif" alt="pgif" srcset="" />
         <img class="block md:hidden" src="/posterMobileSaat.jpg" alt="" srcset="" />
       </swiper-slide>
       <swiper-slide>
-        <!-- <img class="hidden md:block" src="/pkart.webp" alt="pkart" srcset="" /> -->
+        <img class="hidden md:block" src="/pkart.webp" alt="pkart" srcset="" />
         <img class="block md:hidden" src="/posterMobileUltra.jpg" alt="" srcset="" />
       </swiper-slide>
     </swiper>
