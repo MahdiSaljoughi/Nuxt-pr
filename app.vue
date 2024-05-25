@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <Link rel="icon" href="Logo2.webp" />
+    <Link rel="icon" href="/apple-touch-icon.png" />
   </Head>
   <div class="cursor-default">
     <nuxtPage />

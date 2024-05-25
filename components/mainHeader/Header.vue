@@ -355,7 +355,7 @@
         <div class="hidden lg:flex items-center 2xl:gap-x-10 lg:gap-x-4 mx-5">
           <div>
             <NuxtLink
-              to="/"
+              to="/auth"
               class="flex items-center 2xl:gap-x-3 xl:gap-x-2 lg:gap-x-1"
             >
               <span>
@@ -835,7 +835,7 @@
       </div>
       <div>
         <NuxtLink
-          to="/"
+          to="/auth"
           class="flex flex-col items-center justify-center gap-y-1"
         >
           <svg
