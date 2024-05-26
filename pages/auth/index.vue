@@ -3,7 +3,7 @@
     <Title>ورود / ثبت نام</Title>
   </Head>
   <div
-    class="mt-[250px] md:mt-[300px] md:mb-[50px] flex justify-center items-center"
+    class="mt-[200px] md:mt-[300px] md:mb-[50px] flex justify-center items-center"
   >
     <img src="/public/mobit.svg" alt="logo" style="margin-bottom: 20px;" class="w-[140px] md:w-[125px] z-50" />
   </div>
