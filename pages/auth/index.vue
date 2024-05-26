@@ -72,7 +72,7 @@ export default {
       if (!value) {
         return "این فیلد الزامی می باشد !";
       }
-      const regex = /^[a-z]{3,10}/;
+      const regex = /^[a-zA-Z]{3,10}/;
       if (!regex.test(value)) {
         return "نام کاربری معتبر نیست !";
       }
