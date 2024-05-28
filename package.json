@@ -16,7 +16,9 @@
     "swiper": "^11.1.1",
     "vee-validate": "^4.12.8",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vue-yup-form": "^1.0.8",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
