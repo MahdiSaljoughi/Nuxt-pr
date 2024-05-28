@@ -18,6 +18,7 @@
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
     "vue-yup-form": "^1.0.8",
+    "vue3-form-wizard": "^0.2.3",
     "yup": "^1.4.0"
   },
   "devDependencies": {
