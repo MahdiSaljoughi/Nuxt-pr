@@ -118,42 +118,42 @@ span {
 </style>
 
 <script setup>
-import { useForm } from "vee-validate";
-import * as yup from "yup";
-import { FormWizard, TabContent } from "vue3-form-wizard";
-import "vue3-form-wizard/dist/style.css";
+import { useForm } from "vee-validate"
+import * as yup from "yup"
+import { FormWizard, TabContent } from "vue3-form-wizard"
+import "vue3-form-wizard/dist/style.css"
 components: {
-  FormWizard, TabContent;
+  FormWizard, TabContent
 }
 
 const schema = yup.object({
   username: yup.string().required(),
   email: yup.string().email().required(),
   password: yup.string().min(8).required(),
-});
+})
 
 const { defineField, errors, handleSubmit } = useForm({
   validationSchema: schema,
-});
+})
 
-const [username, usernameAttrs] = defineField("username");
-const [email, emailAttrs] = defineField("email");
-const [password, passwordAttrs] = defineField("password");
+errors()
 
-// const addUser = await $fetch(
-//   "https://jsonplaceholder.typicode.com/todos/1/users",
-//   {
-//     method: "POST",
-//     body: JSON.stringify({
-//       username: "username",
-//       email: "email",
-//       password: "password",
-//     }),
-//   }
-// );
-// console.log(addUser);
+const [username, usernameAttrs] = defineField("username")
+const [email, emailAttrs] = defineField("email")
+const [password, passwordAttrs] = defineField("password")
 
-// const onSubmit = handleSubmit((values) => {
-//   alert(JSON.stringify(values, null, 2));
-// });
+const onSubmit = handleSubmit((values) => {
+  console.log(JSON.stringify(values, null, 2))
+  const data = $fetch("https://jsonplaceholder.typicode.com/todos/1/users",
+  {
+    method: "POST",
+    body: JSON.stringify({
+      username: values.username,
+      email: values.email,
+      password: values.password,
+    }),
+  }
+)
+console.log(data)
+})
 </script>
