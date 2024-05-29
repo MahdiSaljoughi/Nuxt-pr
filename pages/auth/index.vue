@@ -136,8 +136,6 @@ const { defineField, errors, handleSubmit } = useForm({
   validationSchema: schema,
 })
 
-errors()
-
 const [username, usernameAttrs] = defineField("username")
 const [email, emailAttrs] = defineField("email")
 const [password, passwordAttrs] = defineField("password")
