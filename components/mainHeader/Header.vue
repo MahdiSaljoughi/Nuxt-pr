@@ -42,190 +42,29 @@
                     ></span>
                   </div>
                 </div>
-                <!-- megeMenu DATA -->
+                <!-- megeMenu -->
                 <div
                   class="relative hidden group-hover/menu:block transition-all"
                 >
                   <div
                     class="bg-white w-[240px] h-[388px] text-[#3F434D] text-[13px] absolute top-6 py-3 rounded-br-xl shadow-md transition-all duration-1000"
                   >
-                    <!-- 1 -->
+                    
                     <div
-                      v-for="(data, index) in dataMegaMenu.dataMobile_1"
-                      :key="index"
+                      v-for="D1 in dataMenu" :key="D1.id"
                       class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
                     >
-                      <img :src="data.img" alt="img" class="w-10" />
-                      <a :href="data.link">{{ data.title }}</a>
+                      <img :src="D1.img" alt="img" class="w-10" />
+                      <a>{{ D1.name }}</a>
                       <div
                         class="hidden group-hover/list:block cursor-default bg-white w-[512px] h-[388px] absolute top-0 mr-[228px] rounded-bl-xl shadow-md py-3 pl-10 pr-3"
                       >
                         <div class="grid grid-cols-2 py-2 pr-2">
-                          <div
-                            v-for="(dataChild, index) in data.child"
-                            :key="index"
-                          >
+                          <div v-for="child in D1.children" :key="child.id">
                             <a
-                              :href="dataChild.link"
-                              :class="{ borderR: dataChild.BIF }"
+                              :class="{ borderR: true }"
                               class="inline-block hover:text-[#377DFF] text-[#3F434D] text-[12px] mb-3"
-                              >{{ dataChild.title }}</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 2 -->
-                    <div
-                      v-for="(data, index) in dataMegaMenu.dataJanebi_2"
-                      :key="index"
-                      class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
-                    >
-                      <img :src="data.img" alt="img" class="w-10" />
-                      <a :href="data.link">{{ data.title }}</a>
-                      <div
-                        class="hidden group-hover/list:block cursor-default bg-white w-[512px] h-[388px] absolute top-0 mr-[228px] rounded-bl-xl shadow-md py-3 pl-10 pr-3"
-                      >
-                        <div class="grid grid-cols-2">
-                          <div
-                            v-for="(dataChild, index) in data.child"
-                            :key="index"
-                          >
-                            <a
-                              :href="dataChild.link"
-                              :class="{ borderR: dataChild.BIF }"
-                              class="inline-block hover:text-[#377DFF] text-[#3F434D] text-[12px] mb-3"
-                              >{{ dataChild.title }}</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 3 -->
-                    <div
-                      v-for="(data, index) in dataMegaMenu.dataLaptop_3"
-                      :key="index"
-                      class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
-                    >
-                      <img :src="data.img" alt="img" class="w-10" />
-                      <a :href="data.link">{{ data.title }}</a>
-                      <div
-                        class="hidden group-hover/list:block cursor-default bg-white w-[768px] h-[388px] absolute top-0 mr-[228px] rounded-bl-xl shadow-md py-3 pl-10 pr-3"
-                      >
-                        <div class="grid grid-cols-3">
-                          <div
-                            v-for="(dataChild, index) in data.child"
-                            :key="index"
-                          >
-                            <a
-                              :href="dataChild.link"
-                              :class="{ borderR: dataChild.BIF }"
-                              class="inline-block hover:text-[#377DFF] text-[#3F434D] text-[12px] mb-3"
-                              >{{ dataChild.title }}</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 4 -->
-                    <div
-                      v-for="(data, index) in dataMegaMenu.dataGajet_4"
-                      :key="index"
-                      class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
-                    >
-                      <img :src="data.img" alt="img" class="w-10" />
-                      <a :href="data.link">{{ data.title }}</a>
-                      <div
-                        class="hidden group-hover/list:block cursor-default bg-white w-[256px] h-[388px] absolute top-0 mr-[228px] rounded-bl-xl shadow-md py-3 pr-3"
-                      >
-                        <div>
-                          <div
-                            v-for="(dataChild, index) in data.child"
-                            :key="index"
-                          >
-                            <a
-                              :href="dataChild.link"
-                              :class="{ borderR: dataChild.BIF }"
-                              class="inline-block hover:text-[#377DFF] text-[#3F434D] text-[12px] mb-3"
-                              >{{ dataChild.title }}</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 5 -->
-                    <div
-                      v-for="(data, index) in dataMegaMenu.dataSoti_5"
-                      :key="index"
-                      class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
-                    >
-                      <img :src="data.img" alt="img" class="w-10" />
-                      <a :href="data.link">{{ data.title }}</a>
-                      <div
-                        class="hidden group-hover/list:block cursor-default bg-white w-[256px] h-[388px] absolute top-0 mr-[228px] rounded-bl-xl shadow-md py-3 pr-3"
-                      >
-                        <div>
-                          <div
-                            v-for="(dataChild, index) in data.child"
-                            :key="index"
-                          >
-                            <a
-                              :href="dataChild.link"
-                              :class="{ borderR: dataChild.BIF }"
-                              class="inline-block hover:text-[#377DFF] text-[#3F434D] text-[12px] mb-3"
-                              >{{ dataChild.title }}</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 6 -->
-                    <div
-                      v-for="(data, index) in dataMegaMenu.dataMashin_6"
-                      :key="index"
-                      class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
-                    >
-                      <img :src="data.img" alt="img" class="w-10" />
-                      <a :href="data.link">{{ data.title }}</a>
-                      <div
-                        class="hidden group-hover/list:block cursor-default bg-white w-[256px] h-[388px] absolute top-0 mr-[228px] rounded-bl-xl shadow-md py-3 pr-3"
-                      >
-                        <div>
-                          <div
-                            v-for="(dataChild, index) in data.child"
-                            :key="index"
-                          >
-                            <a
-                              :href="dataChild.link"
-                              :class="{ borderR: dataChild.BIF }"
-                              class="inline-block hover:text-[#377DFF] text-[#3F434D] text-[12px] mb-3"
-                              >{{ dataChild.title }}</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 7 -->
-                    <div
-                      v-for="(data, index) in dataMegaMenu.dataConsole_7"
-                      :key="index"
-                      class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
-                    >
-                      <img :src="data.img" alt="img" class="w-10" />
-                      <a :href="data.link">{{ data.title }}</a>
-                      <div
-                        class="hidden group-hover/list:block cursor-default bg-white w-[256px] h-[388px] absolute top-0 mr-[228px] rounded-bl-xl shadow-md py-3 pr-3"
-                      >
-                        <div>
-                          <div
-                            v-for="(dataChild, index) in data.child"
-                            :key="index"
-                          >
-                            <a
-                              :href="dataChild.link"
-                              :class="{ borderR: dataChild.BIF }"
-                              class="inline-block hover:text-[#377DFF] text-[#3F434D] text-[12px] mb-3"
-                              >{{ dataChild.title }}</a
+                              >{{ child.name }}</a
                             >
                           </div>
                         </div>
@@ -233,7 +72,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- END -->
+                <!-- /megeMenu -->
               </div>
               <nuxt-link to="/shop">
                 <div
@@ -594,7 +433,10 @@
       class="lg:hidden inline-block fixed bg-[#1C39BB] w-full sm:px-5 z-30 h-[127px] text-zinc-600"
     >
       <!-- menuMobile -->
-      <div id="menu" class="hidden fixed right-0 w-[310px] h-screen bg-white shadow-xl z-[100]">
+      <div
+        id="menu"
+        class="hidden fixed right-0 w-[310px] h-screen bg-white shadow-xl z-[100]"
+      >
         <div
           class="bg-[#1C39BB] w-full h-[60px] flex items-center pr-1.5 pl-[15px]"
         >
@@ -629,14 +471,42 @@
           </div>
           <div class="flex items-center gap-x-5 mt-5 mr-5">
             <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-linejoin="round" stroke-width="1" d="M20.6 5.26a2.51 2.51 0 0 0-2.48-2.2H5.885a2.51 2.51 0 0 0-2.48 2.19l-.3 2.47a3.4 3.4 0 0 0 1.16 2.56v8.16a2.5 2.5 0 0 0 2.5 2.5h10.47a2.5 2.5 0 0 0 2.5-2.5v-8.16A3.4 3.4 0 0 0 20.9 7.72Zm-6.59 14.68h-4v-4.08a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5Zm4.73-1.5a1.5 1.5 0 0 1-1.5 1.5h-2.23v-4.08a2.5 2.5 0 0 0-2.5-2.5h-1a2.5 2.5 0 0 0-2.5 2.5v4.08H6.765a1.5 1.5 0 0 1-1.5-1.5v-7.57a3.2 3.2 0 0 0 1.24.24a3.36 3.36 0 0 0 2.58-1.19a.24.24 0 0 1 .34 0a3.36 3.36 0 0 0 2.58 1.19A3.4 3.4 0 0 0 14.6 9.92a.22.22 0 0 1 .16-.07a.24.24 0 0 1 .17.07a3.36 3.36 0 0 0 2.58 1.19a3.2 3.2 0 0 0 1.23-.24Zm-1.23-8.33a2.39 2.39 0 0 1-1.82-.83a1.2 1.2 0 0 0-.92-.43h-.01a1.2 1.2 0 0 0-.92.42a2.476 2.476 0 0 1-3.65 0a1.24 1.24 0 0 0-1.86 0A2.405 2.405 0 0 1 4.1 7.78l.3-2.4a1.52 1.52 0 0 1 1.49-1.32h12.23a1.5 1.5 0 0 1 1.49 1.32l.29 2.36a2.39 2.39 0 0 1-2.395 2.37Z"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M20.6 5.26a2.51 2.51 0 0 0-2.48-2.2H5.885a2.51 2.51 0 0 0-2.48 2.19l-.3 2.47a3.4 3.4 0 0 0 1.16 2.56v8.16a2.5 2.5 0 0 0 2.5 2.5h10.47a2.5 2.5 0 0 0 2.5-2.5v-8.16A3.4 3.4 0 0 0 20.9 7.72Zm-6.59 14.68h-4v-4.08a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5Zm4.73-1.5a1.5 1.5 0 0 1-1.5 1.5h-2.23v-4.08a2.5 2.5 0 0 0-2.5-2.5h-1a2.5 2.5 0 0 0-2.5 2.5v4.08H6.765a1.5 1.5 0 0 1-1.5-1.5v-7.57a3.2 3.2 0 0 0 1.24.24a3.36 3.36 0 0 0 2.58-1.19a.24.24 0 0 1 .34 0a3.36 3.36 0 0 0 2.58 1.19A3.4 3.4 0 0 0 14.6 9.92a.22.22 0 0 1 .16-.07a.24.24 0 0 1 .17.07a3.36 3.36 0 0 0 2.58 1.19a3.2 3.2 0 0 0 1.23-.24Zm-1.23-8.33a2.39 2.39 0 0 1-1.82-.83a1.2 1.2 0 0 0-.92-.43h-.01a1.2 1.2 0 0 0-.92.42a2.476 2.476 0 0 1-3.65 0a1.24 1.24 0 0 0-1.86 0A2.405 2.405 0 0 1 4.1 7.78l.3-2.4a1.52 1.52 0 0 1 1.49-1.32h12.23a1.5 1.5 0 0 1 1.49 1.32l.29 2.36a2.39 2.39 0 0 1-2.395 2.37Z"
+                />
+              </svg>
             </span>
             <nuxt-link to="/">همکار و قیمت عمده</nuxt-link>
           </div>
-          <div class="flex items-center justify-between gap-x-5 mt-5 mr-5 ml-2.5">
+          <div
+            class="flex items-center justify-between gap-x-5 mt-5 mr-5 ml-2.5"
+          >
             <div class="flex items-center gap-x-5">
               <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="currentColor" stroke="currentColor" stroke-linejoin="round" stroke-width="3" d="M18 6H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2ZM40 6H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2Z"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M18 6H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2ZM40 6H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2Z"
+                  />
+                </svg>
               </span>
               <nuxt-link to="/">دسته بندی ها</nuxt-link>
             </div>
@@ -656,7 +526,11 @@
           </div>
         </div>
       </div>
-      <div @click="closeMenu" id="overlay" class="hidden sm:fixed w-full h-screen bg-black/10"></div>
+      <div
+        @click="closeMenu"
+        id="overlay"
+        class="hidden sm:fixed w-full h-screen bg-black/10"
+      ></div>
       <!-- svg & logo -->
       <div class="flex items-center justify-between mt-4">
         <div @click="openMenu" class="w-9 flex justify-end">
@@ -867,183 +741,27 @@
   font-size: 13px;
 }
 </style>
-  
-<script>
-export default {
-  data() {
-    return {
-      dataMegaMenu: {
-        dataMobile_1: [
-          {
-            title: "موبایل و تبلت",
-            link: "isLinkMobile",
-            img: "mobile.svg",
-            child: [
-              { title: "گوشی موبایل", link: "mobileLink", BIF: true },
-              { title: "شیائومی", link: "#" },
-              { title: "سامسونگ", link: "#" },
-              { title: "اپل", link: "#" },
-              { title: "هواوی", link: "#" },
-              { title: "نوکیا", link: "#" },
-              { title: "آنر", link: "#" },
-              { title: "گوشی های ساده", link: "#" },
-              { title: "گلس گوشی موبایل (محافظ صفحه نمایش)", link: "#" },
-              { title: "کیف و کاور گوشی", link: "#" },
-              { title: "کابل و مبدل", link: "#" },
-              { title: "کارت حافظه گوشی موبایل", link: "#" },
-              { title: "پایه نگه دارنده تبلت و گوشی", link: "#" },
-              { title: "شارژر گوشی", link: "#" },
-              { title: "هدفون,هدست,هندزفری", link: "#", BIF: true },
-              { title: "باتری گوشی", link: "#" },
-              { title: "پاور بانک (شارژر همراه)", link: "#", BIF: true },
-              { title: "محافظ لنز دوربین گوشی موبایل", link: "#" },
-              { title: "لوازم جانبی موبایل", link: "#", BIF: true },
-              { title: "قلم هوشمند", link: "#" },
-              { title: "کیف و کاور هندزفری", link: "#" },
-              { title: "تبلت", link: "#", BIF: true },
-            ],
-          },
-        ],
-        dataJanebi_2: [
-          {
-            title: "لوازم جانبی موبایل",
-            link: "isLinkMobile",
-            img: "janebi.webp",
-            child: [
-              { title: "برند گوشی", link: "mobileLink", BIF: true },
-              { title: "لوازم جانبی اپل", link: "#" },
-              { title: "لوازم جانبی سامسونگ", link: "#" },
-              { title: "لوازم جانبی شیائومی", link: "#" },
-              { title: "لوازم جانبی هواوی و آنر", link: "#" },
-              { title: "لوازم جانبی نوکیا", link: "#" },
-              { title: "لوازم جانبی جی پلاس", link: "#" },
-              { title: "لوازم جانبی متورولا", link: "#" },
-              { title: "دسته بندی محصولات", link: "#", BIF: true },
-              { title: "شارژر", link: "#" },
-              { title: "کابل و مبدل", link: "#" },
-              { title: "پاور بانک", link: "#" },
-              { title: "باتری گوشی موبایل", link: "#" },
-              { title: "کارت حافظه گوشی موبایل", link: "#" },
-              { title: "کاور و کیف گوشی موبایل", link: "#" },
-              { title: "محافظ لنز گوشی موبایل", link: "#" },
-              { title: "پایه نگهدارنده گوشی موبایل", link: "#" },
-              { title: "گلس و محافظ صفحه گوشی موبایل", link: "#" },
-              { title: "هدفون و هندزفری", link: "#" },
-              { title: "کیف و کاور هندزفری", link: "#" },
-              { title: "اسپیکر بلوتوثی", link: "#" },
-              { title: "ساعت هوشمند", link: "#" },
-            ],
-          },
-        ],
-        dataLaptop_3: [
-          {
-            title: "لپ تاپ و کامپیوتر",
-            link: "isLinkMobile",
-            img: "laptop.svg",
-            child: [
-              { title: "لپ تاپ", link: "#", BIF: true },
-              { title: "کامپیوتر کوچک", link: "#", BIF: true },
-              { title: "کامپیوتر All-in-One", link: "#", BIF: true },
-              { title: "قطعات اصلی", link: "#", BIF: true },
-              { title: "پردازنده", link: "#" },
-              { title: "مادربورد", link: "#" },
-              { title: "رم کامپیوتر", link: "#" },
-              { title: "منبع تغذیه", link: "#" },
-              { title: "کارت گرافیک", link: "#" },
-              { title: "کیس", link: "#" },
-              { title: "هارد دیسک", link: "#" },
-              { title: "درایو نوری", link: "#" },
-              { title: "فن - خنک کننده", link: "#" },
-              { title: "مانیتور", link: "#", BIF: true },
-              { title: "اسپیکر", link: "#", BIF: true },
-              { title: "جانبی کامپیوتر و لپ تاپ", link: "#", BIF: true },
-              { title: "کیبورد", link: "#" },
-              { title: "ماوس", link: "#" },
-              { title: "مواس پد", link: "#" },
-              { title: "کیف هارد", link: "#" },
-              { title: "کابل تبدیل و مبدل", link: "#" },
-              { title: "کیف و کوله", link: "#" },
-              { title: "پایه خنک کننده", link: "#" },
-              { title: "براکت هارداینترنال", link: "#" },
-              { title: "سایر قطعات جانبی", link: "#" },
-              { title: "فلش مموری", link: "#", BIF: true },
-              { title: "ذخیره ساز اطلاعات", link: "#", BIF: true },
-              { title: "حافظه اکسترنال", link: "#" },
-              { title: "حافظه SSD", link: "#" },
-              { title: "تجهیزات شبکه", link: "#", BIF: true },
-              { title: "دوربین مداربسته", link: "#", BIF: true },
-              { title: "نرم افزار", link: "#", BIF: true },
-            ],
-          },
-        ],
-        dataGajet_4: [
-          {
-            title: "گجت های هوشمند",
-            link: "isLinkMobile",
-            img: "gajet.svg",
-            child: [
-              { title: "ساعت هوشمند", link: "#", BIF: true },
-              { title: "مچ بند هوشمند", link: "#", BIF: true },
-              { title: "لوازم جانبی شیایومی", link: "#", BIF: true },
-              {
-                title: "لوازم جانبی مچ بند و ساعت هوشمند",
-                link: "#",
-                BIF: true,
-              },
-            ],
-          },
-        ],
-        dataSoti_5: [
-          {
-            title: "لوازم صوتی و تصویری",
-            link: "isLinkMobile",
-            img: "soti.svg",
-            child: [
-              { title: "تلوزیون", link: "#", BIF: true },
-              { title: "سینمای خانگی و ساندبار", link: "#", BIF: true },
-              { title: "لوازم جانبی صوتی و تصویری", link: "#", BIF: true },
-              { title: "رادیو", link: "#", BIF: true },
-            ],
-          },
-        ],
-        dataMashin_6: [
-          {
-            title: "ماشین های اداری",
-            link: "isLinkMobile",
-            img: "mashin.svg",
-            child: [
-              { title: "پرینتر", link: "#", BIF: true },
-              { title: "پرینتر لیبل زن و لوازم جانبی", link: "#", BIF: true },
-            ],
-          },
-        ],
-        dataConsole_7: [
-          {
-            title: "کنسول بازی",
-            link: "isLinkMobile",
-            img: "console.svg",
-            child: [
-              { title: "کنسول بازی خانگی", link: "#", BIF: true },
-              { title: "تجهیزات جانبی کنسول بازی", link: "#", BIF: true },
-            ],
-          },
-        ],
-      },
-    };
-  },
-  methods: {
-    openMenu() {
-      const menu = document.getElementById("menu");
-      const overlay = document.getElementById("overlay");
-      menu.classList.remove("hidden");
-      overlay.classList.remove("hidden");
-    },
-    closeMenu() {
-      const menu = document.getElementById("menu");
-      const overlay = document.getElementById("overlay");
-      menu.classList.add("hidden");
-      overlay.classList.add("hidden");
-    },
-  },
-};
+
+<script setup>
+const { data } = await useAsyncData(() =>
+  $fetch(
+    "https://api.mobit.ir/api/web/v6/site/menu-roots?expand=category.isRoot&fields=name%2Cid%2Cimg%2Cchildren%2CapiLink%2CisRoot"
+  )
+)
+
+const dataMenu = data._rawValue.items
+
+// metods
+function openMenu() {
+  const menu = document.getElementById("menu")
+  const overlay = document.getElementById("overlay")
+  menu.classList.remove("hidden")
+  overlay.classList.remove("hidden")
+}
+function closeMenu() {
+  const menu = document.getElementById("menu")
+  const overlay = document.getElementById("overlay")
+  menu.classList.add("hidden")
+  overlay.classList.add("hidden")
+}
 </script>
