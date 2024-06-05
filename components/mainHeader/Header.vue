@@ -49,9 +49,9 @@
                   <div
                     class="bg-white w-[240px] h-[388px] text-[#3F434D] text-[13px] absolute top-6 py-3 rounded-br-xl shadow-md transition-all duration-1000"
                   >
-                    
                     <div
-                      v-for="D1 in dataMenu" :key="D1.id"
+                      v-for="D1 in dataMenu"
+                      :key="D1.id"
                       class="flex items-center gap-x-2 group/list hover:border-t-[1px] px-3 py-1.5 hover:border-b-[1px] border-zinc-700/10 hover:bg-gray-50 hover:text-[#377DFF]"
                     >
                       <img :src="D1.img" alt="img" class="w-10" />
@@ -745,23 +745,26 @@
 <script setup>
 const { data } = await useAsyncData(() =>
   $fetch(
-    "https://api.mobit.ir/api/web/v6/site/menu-roots?expand=category.isRoot&fields=name%2Cid%2Cimg%2Cchildren%2CapiLink%2CisRoot"
+    "https://api.mobit.ir/api/web/v6/site/menu-roots?expand=category.isRoot&fields=name%2Cid%2Cimg%2Cchildren%2CapiLink%2CisRoot",
+    {
+      server: false,
+    }
   )
-)
+);
 
-const dataMenu = data._rawValue.items
+const dataMenu = data._rawValue.items;
 
 // metods
 function openMenu() {
-  const menu = document.getElementById("menu")
-  const overlay = document.getElementById("overlay")
-  menu.classList.remove("hidden")
-  overlay.classList.remove("hidden")
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("overlay");
+  menu.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 }
 function closeMenu() {
-  const menu = document.getElementById("menu")
-  const overlay = document.getElementById("overlay")
-  menu.classList.add("hidden")
-  overlay.classList.add("hidden")
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("overlay");
+  menu.classList.add("hidden");
+  overlay.classList.add("hidden");
 }
 </script>
