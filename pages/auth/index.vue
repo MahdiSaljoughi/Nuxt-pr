@@ -127,9 +127,9 @@ components: {
 }
 
 const schema = yup.object({
-  username: yup.string().required(),
-  email: yup.string().email().required(),
-  password: yup.string().min(8).required(),
+  username: yup.string().min(3).required().label("نام کاربری"),
+  email: yup.string().email().required().label("ایمیل"),
+  password: yup.string().min(8).required().label("رمز عبور"),
 })
 
 const { defineField, errors, handleSubmit } = useForm({
